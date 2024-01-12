@@ -1,0 +1,150 @@
+object TfrmLogin: TTfrmLogin
+  Left = 471
+  Height = 447
+  Top = 181
+  Width = 548
+  Caption = 'Login'
+  ClientHeight = 0
+  ClientWidth = 0
+  Color = clForm
+  DesignTimePPI = 144
+  LCLVersion = '2.2.6.0'
+  object Label1: TLabel
+    Left = 248
+    Height = 47
+    Top = 48
+    Width = 90
+    Caption = 'Login'
+    Color = clForm
+    Font.CharSet = ANSI_CHARSET
+    Font.Height = -32
+    Font.Name = 'Sitka Text'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    ParentColor = False
+    ParentFont = False
+    Transparent = False
+  end
+  object BLogin: TButton
+    Left = 168
+    Height = 38
+    Top = 264
+    Width = 112
+    Caption = 'Login'
+    OnClick = BLoginClick
+    TabOrder = 0
+  end
+  object Label2: TLabel
+    Left = 170
+    Height = 26
+    Top = 120
+    Width = 84
+    Caption = 'Username'
+    Font.CharSet = ANSI_CHARSET
+    Font.Name = 'Sitka Text'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    ParentColor = False
+    ParentFont = False
+  end
+  object Label3: TLabel
+    Left = 170
+    Height = 26
+    Top = 192
+    Width = 79
+    Caption = 'Password'
+    Font.CharSet = ANSI_CHARSET
+    Font.Name = 'Sitka Text'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    ParentColor = False
+    ParentFont = False
+  end
+  object EUsername: TEdit
+    Left = 170
+    Height = 33
+    Top = 144
+    Width = 264
+    TabOrder = 1
+    TextHint = 'Masukkan username'
+  end
+  object EPassword: TEdit
+    Left = 168
+    Height = 33
+    Top = 216
+    Width = 266
+    EchoMode = emPassword
+    PasswordChar = '*'
+    TabOrder = 2
+    TextHint = 'Masukkan password'
+  end
+  object BExit: TButton
+    Left = 320
+    Height = 38
+    Top = 264
+    Width = 112
+    Caption = 'Exit'
+    OnClick = BExitClick
+    TabOrder = 3
+  end
+  object SQLQuery1: TSQLQuery
+    IndexName = 'DEFAULT_ORDER'
+    MaxIndexesCount = 4
+    FieldDefs = <    
+      item
+        Name = 'id'
+        DataType = ftAutoInc
+        Precision = -1
+      end    
+      item
+        Name = 'username'
+        DataType = ftString
+        Precision = -1
+        Size = 20
+      end    
+      item
+        Name = 'password'
+        DataType = ftString
+        Precision = -1
+        Size = 250
+      end    
+      item
+        Name = 'nama'
+        DataType = ftString
+        Precision = -1
+        Size = 200
+      end    
+      item
+        Name = 'role'
+        DataType = ftSmallint
+        Precision = -1
+      end>
+    Active = True
+    Database = SQLConnector1
+    Transaction = SQLTransaction1
+    SQL.Strings = (
+      'SELECT * FROM user'
+    )
+    Params = <>
+    Macros = <>
+    Left = 440
+    Top = 320
+  end
+  object SQLConnector1: TSQLConnector
+    Connected = True
+    LoginPrompt = False
+    DatabaseName = 'latihan1'
+    KeepConnection = False
+    Transaction = SQLTransaction1
+    ConnectorType = 'ODBC'
+    Left = 128
+    Top = 320
+  end
+  object SQLTransaction1: TSQLTransaction
+    Active = True
+    Database = SQLConnector1
+    Left = 281
+    Top = 320
+  end
+end
