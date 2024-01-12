@@ -1,0 +1,53 @@
+object TfrmMain: TTfrmMain
+  Left = 429
+  Height = 383
+  Top = 86
+  Width = 507
+  Caption = 'Main'
+  Color = 4259584
+  Menu = MainMenu1
+  OnCreate = FormCreate
+  LCLVersion = '3.0.0.3'
+  object MainMenu1: TMainMenu
+    Left = 245
+    Top = 229
+    object MenuFile: TMenuItem
+      Caption = 'File'
+      object MenuLogin: TMenuItem
+        Caption = 'Login'
+        OnClick = MenuLoginClick
+      end
+      object MenuLogout: TMenuItem
+        Caption = 'Logout'
+        OnClick = MenuLogoutClick
+      end
+      object MenuExit: TMenuItem
+        Caption = 'Exit'
+        OnClick = MenuExitClick
+      end
+    end
+    object MenuDataMaster: TMenuItem
+      Caption = 'Data Master'
+      object MenuDataBarang: TMenuItem
+        Caption = 'Data Barang'
+        OnClick = MenuDataBarangClick
+      end
+      object MenuDataKategoriBarang: TMenuItem
+        Caption = 'Data Kategori Barang'
+        OnClick = MenuDataKategoriBarangClick
+      end
+      object MenuDataCustomer: TMenuItem
+        Caption = 'Data Customer'
+        OnClick = MenuDataCustomerClick
+      end
+    end
+    object MenuTransaksi: TMenuItem
+      Caption = 'Transaksi'
+      OnClick = MenuTransaksiClick
+    end
+    object MenuLaporan: TMenuItem
+      Caption = 'Laporan'
+      OnClick = MenuLaporanClick
+    end
+  end
+end

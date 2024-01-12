@@ -1,0 +1,61 @@
+object TfrmTambahTransaksi: TTfrmTambahTransaksi
+  Left = 622
+  Height = 348
+  Top = 209
+  Width = 485
+  Caption = 'Tambah Transaksi'
+  ClientHeight = 0
+  ClientWidth = 0
+  Color = 4259584
+  OnClose = FormClose
+  LCLVersion = '3.0.0.3'
+  object Label1: TLabel
+    Left = 155
+    Height = 30
+    Top = 64
+    Width = 172
+    Caption = 'Tambah Transaksi'
+    Font.CharSet = ANSI_CHARSET
+    Font.Height = -21
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    ParentColor = False
+    ParentFont = False
+  end
+  object Label2: TLabel
+    Left = 155
+    Height = 18
+    Top = 112
+    Width = 90
+    Caption = 'Nama Customer'
+    Font.CharSet = ANSI_CHARSET
+    Font.Name = 'Sitka Text'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    ParentColor = False
+    ParentFont = False
+  end
+  object ECustomer: TEdit
+    Left = 155
+    Height = 23
+    Top = 133
+    Width = 182
+    TabOrder = 0
+    TextHint = 'Nama Customer'
+  end
+  object BTambahTransaksi: TButton
+    Left = 155
+    Height = 25
+    Top = 176
+    Width = 181
+    Caption = 'Tambah'
+    Font.CharSet = ANSI_CHARSET
+    Font.Name = 'Sitka Text'
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    ParentFont = False
+    TabOrder = 1
+    OnClick = BTambahTransaksiClick
+  end
+end
